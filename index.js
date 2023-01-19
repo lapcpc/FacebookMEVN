@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+const bcryptjs = require('bcryptjs')
 const path = require("path")
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
@@ -27,7 +27,7 @@ app.post('/api/signup', (req, res, next) => {
   const newUser = new User({
     email: req.body.email,
     name: req.body.name,
-    password: bcrypt.hashSync(req.body.password, 10)
+    password:req.body.password
   })
   newUser.save(err => {
     if (err) {
@@ -54,7 +54,7 @@ app.post('/api/login', (req, res, next) => {
       })
     }
     //incorrect password
-    if (!bcrypt.compareSync(req.body.password, user.password)) {
+    if (req.body.password != user.password) {
       return res.status(401).json({
         tite: 'login failed',
         error: 'invalid credentials'
