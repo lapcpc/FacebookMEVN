@@ -41,7 +41,7 @@ export default{
           email: this.email,
           password: this.password
         }
-        axios.post('http://localhost:5000/api/signup', newUser)
+        axios.post('https://facebook-mevn.vercel.app/api/signup', newUser)
           .then(res => {
             this.error = '';
             this.accion2();

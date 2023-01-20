@@ -37,7 +37,7 @@
       }
     },
     mounted() {
-      axios.get('http://localhost:5000/api/user', { headers: { token: localStorage.getItem('token')}})
+      axios.get('https://facebook-mevn.vercel.app/api/user', { headers: { token: localStorage.getItem('token')}})
         .then(res => {
           this.name = res.data.user.name;
           this.email = res.data.user.email;
