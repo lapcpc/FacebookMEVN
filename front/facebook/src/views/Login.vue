@@ -7,7 +7,7 @@
       The user was registered succesfully!
     </AlertBox>
     <AlertBoxRed :estado="visibilidad3" :close="cerrarAlerta2">
-      Try Again!
+      Try Again, please!
     </AlertBoxRed>
       <div class=' max-w-screen-sm'>
       <img class="w-[50%]" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" />
