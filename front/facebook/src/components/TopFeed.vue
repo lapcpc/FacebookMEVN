@@ -27,7 +27,7 @@
             </div>
             <!-- Crear historias -->
                 <div class=' flex-none bg-white shadow-lg rounded-md w-28 h-48 m-2 '>
-                    <img class=' object-cover w-40 h-36 rounded-md' src="https://pbs.twimg.com/profile_images/1561604184289558529/Bq62M5zI_400x400.jpg" />
+                    <img class=' object-cover w-40 h-36 rounded-md' src="https://cdn-icons-png.flaticon.com/512/6998/6998096.png" />
                     <div class='  h-full'>
                         <div class='bg-blue-500 p-1 border-4 border-white w-fit h-fit relative rounded-full   z-50 -top-5 left-[35%]'>
                         <PlusIcon class='  text-white  w-5 h-5' />

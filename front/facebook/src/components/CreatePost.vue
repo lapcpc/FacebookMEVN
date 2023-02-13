@@ -3,7 +3,7 @@
         <div>
             <div class='flex flex-row space-x-2 m-2 p-2'>
             
-                <img src='https://pbs.twimg.com/profile_images/1561604184289558529/Bq62M5zI_400x400.jpg' class='rounded-full w-10 h-10' />
+                <img src='https://cdn-icons-png.flaticon.com/512/6998/6998096.png' class='rounded-full w-10 h-10' />
                 <input class='w-full rounded-full p-2 placeholder:text-slate-500 bg-gray-100' placeholder='Que estas pensando, Luis Alejandro' />
 
             </div>

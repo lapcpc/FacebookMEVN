@@ -4,7 +4,7 @@
          <!--   Header Post  -->
         <div class='flex flex-row  mx-4 pt-4'>
             <div class='w-fit p-1'>
-                <img class='w-10 h-10 rounded-full' src="https://pbs.twimg.com/profile_images/1561604184289558529/Bq62M5zI_400x400.jpg" />
+                <img class='w-10 h-10 rounded-full' src="https://cdn-icons-png.flaticon.com/512/6998/6998096.png" />
             </div>
             <div class='flex flex-row justify-between w-full'>
                 <div class='flex flex-col p-2 '> 
