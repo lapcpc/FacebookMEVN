@@ -1,11 +1,14 @@
 <template>
  <div class='bg-gray-100/90 flex flex-col lg:flex-row   lg:space-x-10  justify-center h-screen'>
-    <RegistroModal :estado="visibilidad" :accion="cambiarEstado" :accion2="usuarioCreado" />
+    <RegistroModal :estado="visibilidad" :accion="cambiarEstado" :accion2="usuarioCreado" :accion3="cerrarAlerta2"/>
     
     <div class='my-auto mx-auto lg:mx-0 lg:my-0 flex flex-col justify-center '>
     <AlertBox :estado="visibilidad2" :close="cerrarAlerta">
       The user was registered succesfully!
     </AlertBox>
+    <AlertBoxRed :estado="visibilidad3" :close="cerrarAlerta2">
+      Try Again!
+    </AlertBoxRed>
       <div class=' max-w-screen-sm'>
       <img class="w-[50%]" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" />
       <p class='ml-3 text-2xl mt-4'>
@@ -52,12 +55,14 @@
   import axios from 'axios';
   import RegistroModal from'../components/RegistroModal.vue'
   import AlertBox from '../components/AlertBox.vue'
+  import AlertBoxRed from '../components/AlertBoxRed.vue';
   export default {
     name: 'Login',
     components:{
-      RegistroModal,
-      AlertBox
-    },
+    RegistroModal,
+    AlertBox,
+    AlertBoxRed
+},
     data() {
       return {
         email: '',
@@ -65,6 +70,7 @@
         error: '',
         visibilidad:true,
         visibilidad2: false,
+        visibilidad3: false,
       }
     },
     methods: {
@@ -73,6 +79,9 @@
       },
       cerrarAlerta(){
         this.visibilidad2 = !this.visibilidad2
+      },
+      cerrarAlerta2(){
+        this.visibilidad3 = !this.visibilidad3
       },
       usuarioCreado(){
         this.visibilidad = !this.visibilidad
@@ -95,6 +104,7 @@
           }, err => {
             console.log(err.response);
             this.error = err.response.data.error
+            this.visibilidad3 = !this.visibilidad3
           })
       },
       

@@ -19,7 +19,7 @@
 import axios from 'axios'
 
 export default{
-    props: ['estado','accion', 'accion2'],
+    props: ['estado','accion', 'accion2', 'accion3'],
 
     data(){
         return {
@@ -51,6 +51,7 @@ export default{
           }, err => {
             console.log(err.response)
             this.error = err.response.data.error
+            this.accion3();
           })
       }
     }

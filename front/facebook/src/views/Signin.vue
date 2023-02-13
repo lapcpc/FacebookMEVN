@@ -10,6 +10,7 @@
 
   <script>
   import axios from 'axios';
+  import AlertBoxRed from '../components/AlertBoxRed.vue';
   export default {
     name: 'Signup',
     data() {
@@ -18,6 +19,7 @@
         email: '',
         password: '',
         error: '',
+        visibilidad3: false,
       }
     },
     methods: {
@@ -35,7 +37,10 @@
             console.log(err.response)
             this.error = err.response.data.error
           })
-      }
+      },
+      cerrarAlerta2(){
+        this.visibilidad3 = !this.visibilidad3
+      },
     }
   }
   </script>
